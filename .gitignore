@@ -27,3 +27,4 @@ pip-log.txt
 
 # Project-specific
 *.log
+tf2idle.ini
