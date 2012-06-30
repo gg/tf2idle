@@ -89,13 +89,14 @@ def build_arg_parser():
     return parser
 
 
-
-def main(args):
-    app = tf2idle.app.Tf2IdleApp(steam_base_dir=args.steam_base_dir,
-                                 working_dir=args.working_dir,
-                                 sandboxie_install_dir=args.sandboxie_install_dir)
+def main():
+    args = build_arg_parser().parse_args()
+    app = tf2idle.app.Tf2IdleApp(
+        steam_base_dir=args.steam_base_dir,
+        working_dir=args.working_dir,
+        sandboxie_install_dir=args.sandboxie_install_dir)
     args.func(app, args)
 
 
 if __name__ == '__main__':
-    main(build_arg_parser().parse_args())
+    main()

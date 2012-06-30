@@ -24,7 +24,9 @@ setup(
                  'License :: OSI Approved :: MIT License',
                  'Development Status :: 3 - Alpha'],
     packages=['tf2idle'],
-    scripts=['bin/tf2idlectl.py'],
+    entry_points={
+        'console_scripts': ['tf2idle = tf2idle.main:main']
+    },
     license=open('LICENSE').read(),
     description='Python library to idle in Team Fortress 2 using Sandboxie',
     long_description=open('README.rst').read(),
