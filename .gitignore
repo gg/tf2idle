@@ -1,4 +1,7 @@
+docs/_build
+__pycache__
 *.py[co]
+MANIFEST
 
 # Packages
 *.egg
